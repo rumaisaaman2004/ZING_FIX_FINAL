@@ -9,7 +9,11 @@ load_dotenv()
 
 # Initialize Groq client
 try:
-    groq_client = Groq(api_key=os.getenv('GROQ_API_KEY'))
+    import httpx
+    groq_client = Groq(
+        api_key=os.getenv('GROQ_API_KEY'),
+        http_client=httpx.Client()
+    )
     GROQ_AVAILABLE = True
     print("✅ Groq AI Connected Successfully")
 except Exception as e:
