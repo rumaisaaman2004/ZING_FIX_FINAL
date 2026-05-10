@@ -204,3 +204,4 @@ chatbot = Chatbot()
 
 def get_response(user_message, user_type, db=None):
     return chatbot.get_response(user_message, user_type, db)
+# force redeploy Sun May 10 11:02:57 PKT 2026
