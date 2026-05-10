@@ -7,7 +7,7 @@ from groq import Groq # type: ignore
 # Load environment variables
 load_dotenv()
 
-# Initialize Groq client
+# Initialize Groq client-v2
 try:
     import httpx
     groq_client = Groq(
